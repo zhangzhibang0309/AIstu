@@ -85,6 +85,7 @@ if __name__ == '__main__':
     d = dict(zip(a, b))
     for i in d.items():
         print(i)
+        print(type(i))
     for key in d.keys():
         print(key)
     for value in d.values():
@@ -100,8 +101,12 @@ if __name__ == '__main__':
 
     # 6enumerate()--对一个可遍历序列进行遍历 提供索引
     dd = {"name": "zzb", "age": 18}
-    for i, key in enumerate(dd):
+    print(enumerate(dd))
+    for i, key in enumerate(dd): # 字典
         print(i, key, dd[key])
     ll = [1, 2, 3, 4, 5]
-    for i, value in enumerate(ll):
+    for i, value in enumerate(ll): # 列表
+        print(i, value)
+    ll = (1, 2, 3, 4, 5)
+    for i, value in enumerate(ll): # 元组
         print(i, value)
